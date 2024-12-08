@@ -37,3 +37,11 @@ def go_to_checkbox_interaction(page):
 
 def click_the_checkbox(page):
     page.get_by_text("Toggle me", exact = True).click()
+
+def go_to_select_interaction(page):
+    page.get_by_text("Go to Select Interaction", exact = True).click()
+
+def select_2nd_option(page):
+    select_element = page.locator('//div[@id="root"]//select')
+    select_element.select_option(label="Option 2")
+    
